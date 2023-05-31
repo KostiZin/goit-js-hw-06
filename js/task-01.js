@@ -1,16 +1,13 @@
-const list = document.querySelectorAll(`li.item`)
+const list = document.querySelectorAll(`.item`);
 
 console.log(`Number of categories:`, list.length);
 
-console.log(list);
+const category = document.querySelectorAll(`h2`);
 
-const category = document.querySelectorAll(`h2`)
+category.forEach((h2) => console.log(`Category:`, h2.textContent));
 
-console.log(category);
+// const lastElement = list.forEach((number) =>
+//     console.log(`Elements:`, number.children.lastChild);
+// );
 
-// let categoryNumber = list.forEach(number) => {categoryNumber += number};
-
-
-
-
-// console.log(categoryNumber);
+// console.log([...list]);
