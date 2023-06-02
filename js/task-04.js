@@ -15,7 +15,7 @@ const btnIncrease = counterEl.lastElementChild;
 
 btnDecrease.addEventListener(`click`, onClickDecrease);
 
-function onClickDecrease() {
+function onClickDecrease(evt) {
   counterValue.textContent -= 1;
   //   console.log(evt.currentTarget);
 }
