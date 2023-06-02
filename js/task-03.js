@@ -15,6 +15,34 @@ const images = [
 
 const galleryEl = document.querySelector(`.gallery`);
 
+const imagesEl = images
+  .map(
+    ({ url, alt }) =>
+      `<li>
+    <img class="img" src="${url}" alt="${alt}" />
+  </li>`
+  )
+  .join("");
+
+galleryEl.insertAdjacentHTML(`afterbegin`, imagesEl);
+
 console.log(galleryEl);
 
-const liEl = <li><img scr=images ></img></li>
+// Another way (example for myself) ========================
+
+// const imagesEl = images.map(({ url, alt }) => {
+//   const liEl = `
+//   <li>
+//     <img class="img" src="${url}" alt="${alt}" />
+//   </li>`;
+
+//   return liEl;
+// });
+
+// console.log(imagesEl);
+
+// galleryEl.insertAdjacentHTML(`afterbegin`, imagesEl.join(""));
+
+// console.log(galleryEl);
+
+// Another way (example for myself) ========================
