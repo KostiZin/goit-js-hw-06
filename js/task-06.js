@@ -8,7 +8,7 @@ console.dir(inputEl);
 
 // console.log(inputInvalid);
 
-const titleLength = 3;
+const titleLength = 6;
 
 inputEl.addEventListener(`blur`, blurColor);
 
