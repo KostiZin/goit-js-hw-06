@@ -17,8 +17,8 @@ const elements = ingredients.map((ingredientsName) => {
   return liEl;
 });
 
-console.log(elements);
+// console.log(elements);
 
 ingredientsEl.append(...elements);
 
-console.log(ingredientsEl);
+// console.log(ingredientsEl);

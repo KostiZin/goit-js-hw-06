@@ -1,6 +1,5 @@
 const formEl = document.querySelector(`.login-form`);
 
-console.dir(formEl);
 
 formEl.addEventListener(`submit`, onSubmit);
 
@@ -15,7 +14,7 @@ function onSubmit(evt) {
   };
 
   if (data.email === "" || data.password === "") {
-    return alert(`Всі поля повинні бути заповнені`);
+    return alert(`All fields must be completed!`);
   }
   console.log(data);
 

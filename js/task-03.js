@@ -26,7 +26,20 @@ const imagesEl = images
 
 galleryEl.insertAdjacentHTML(`afterbegin`, imagesEl);
 
-console.log(galleryEl);
+
+const styleImg = document.querySelectorAll(`.img`);
+
+
+[...styleImg].map((img) => {
+  img.style.marginBottom = '20px';
+  img.style.height = 'auto';
+  img.style.maxWidth = '100%';
+});
+
+
+
+
+// ======================================================
 
 // Another way (example for myself) ========================
 
