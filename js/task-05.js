@@ -4,9 +4,9 @@ const outputEl = document.querySelector(`#name-output`);
 
 const unknownName = outputEl.textContent;
 
-inputEl.addEventListener("input", enterName);
+inputEl.addEventListener("input", handleEnterName);
 
-function enterName(evt) {
+function handleEnterName(evt) {
   if (evt.currentTarget.value === "") {
     outputEl.textContent = unknownName;
   } else {

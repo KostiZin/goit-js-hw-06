@@ -1,21 +1,19 @@
 const inputEl = document.querySelector(`#validation-input`);
 
-console.dir(inputEl);
+// console.dir(inputEl);
 
-// const inputValid = document.querySelector(`#validation-input.valid`);
+const titleLength = inputEl.dataset.length;
 
-// const inputInvalid = document.querySelector(`#validation-input.invalid`);
+// console.log(titleLength);
 
-// console.log(inputInvalid);
+inputEl.addEventListener(`blur`, handleBlurColor);
 
-const titleLength = 6;
-
-inputEl.addEventListener(`blur`, blurColor);
-
-function blurColor(evt) {
-  if (evt.currentTarget.selectionEnd === titleLength) {
-    inputEl.style.border = `2px solid green`;
+function handleBlurColor(evt) {
+  if (evt.currentTarget.value.trim().length === 0) {
+    inputEl.classList.remove(`invalid`, `valid`);
+  } else if (evt.currentTarget.value.trim().length !== Number(titleLength)) {
+    inputEl.classList.add(`invalid`);
   } else {
-    inputEl.style.border = `2px solid red`;
+    inputEl.classList.replace(`invalid`, `valid`);
   }
 }
